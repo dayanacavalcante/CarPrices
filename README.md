@@ -61,7 +61,7 @@ _Dispersion Measures:_
 2. Selling_price: 5.785487e+0;
 3. Km_driven: 46644.102194;
 
-- Correlation:
+ _Correlation:_
 
 We want to know if two variables have any relationship with each other within this data set. For these cases, we can calculate the correlation. It can be seen that there is not a strong dependence on the variables.
 
