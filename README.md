@@ -16,26 +16,26 @@ First, let's check the existing data types, using the .dtypes function. We can s
 Analyzing the "fuel", "seller_type", "transmission" and "owner" columns, it can be seen that there is a predominance of car sales for diesel and petrol. As well as, individual seller type and cars with manual transmission. And almost triple sales for cars with the first owner.
 
 | ![](/Graphics/Fuel.png) | ![](./Graphics/Seller_type.png) |
-|:-:|:-:|:-:|
+|:-:|:-:|
 | ![](/Graphics/Transmission.png) | ![](./Graphics/Owner.png) |
 
 We separate the column "name" as it does not matter for our analysis.
 
 Now we are going to use the _.describe()_ function to return the descriptive statistics values for the columns of the integer type. We can start with measures of central tendency:
 
-- Mean: indicates where the values are concentrated. 
+- **_Mean_**: indicates where the values are concentrated. 
 
 1. Year: 2013;
 2. Selling_price: 5.041273e+05;
 3. Km_driven: 66215.777419;
 
-- Median: is the value that separates the upper half from the lower half of a data distribution. By default, we can adopt the percentage of 50%.
+- **_Median_**: is the value that separates the upper half from the lower half of a data distribution. By default, we can adopt the percentage of 50%.
 
 1. Year: 2014;
 2. Selling_price: 3.500000e+0;
 3. Km_driven: 60000.000000;
 
-- Mode: is the most repeated value.
+- **_Mode_**: is the most repeated value.
 
 1. Year: 2017;
 2. Selling_price: 300000;
@@ -43,19 +43,19 @@ Now we are going to use the _.describe()_ function to return the descriptive sta
 
 _Dispersion Measures:_
 
-- Amplitude: returns the maximum and minimum values.
+- **_Amplitude_**: returns the maximum and minimum values.
 
 1. Year: 2020 - 1992;
 2. Selling_price: 8.900000e+06 - 2.000000e+04;
 3. Km_driven: 806599.000000 - 1.000000;
 
-- Variance: expressed as the data of a set are far from its expected value.
+- **_Variance_**: expressed as the data of a set are far from its expected value.
 
 1. Year: 17.769124530169517;
 2. Selling_price: 334718640087.90295;
 3. Km_driven: 2175672269.448949;
 
-- Standard deviation: expresses how far the data are away from the mean.
+- **_Standard deviation_**: expresses how far the data are away from the mean.
 
 1. Year: 4.215344;
 2. Selling_price: 5.785487e+0;
