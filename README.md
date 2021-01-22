@@ -79,11 +79,11 @@ For this case study, the Linear Regression model was used.
 
 **_Interpretation the results_**
 
-Interpretation of defined models and collection of important business insights. 
+Interpret the defined models and collect important business insights.
 
 Since we are dealing with a regression problem, the model's performance metrics are calculated through errors. The smaller the error, the better.
 
-The MAE (Mean Absolute Error) and MAPE (Mean Absolute Percentage Error) of the training and test data were high. We applied the Cross-Validation that showed what was foreseen by MAE and MAPE. In other words, our model was unable to return a satisfactory result. 
+The MAE (Mean Absolute Error) and MAPE (Mean Absolute Percentage Error) of the training and test data were quite high. We applied the Cross-Validation that showed what was foreseen by MAE and MAPE. In other words, our model was unable to return a satisfactory result. 
 
 As a solution proposal we can, in the next step, analyze the outliers. Linear Regression is an algorithm very sensitive to outliers. And if the data set has too many anomalous values, tools like the mean and the variance may not work well.
 
