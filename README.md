@@ -2,7 +2,7 @@
 
 **_The Problem_**
 
-Analyze trends in car attributes that contribute most to their sale and build a linear regression model to predict prices._
+Analyze trends in car attributes that contribute most to their sale and build a linear regression model to predict prices.
 
 **_Data extraction_**
 
@@ -12,7 +12,7 @@ The data was extracted from the following link: https://www.kaggle.com/nehalbirl
 
 Analyze the data using descriptive statistics.
 
-First, let's check the existing data types, using the .dtypes function. We can see that there are three columns of the integer type and four columns of the object type.
+First, let's check the existing data types, using the _.dtypes_ function. We can see that there are three columns of the integer type and four columns of the object type.
 Analyzing the "fuel", "seller_type", "transmission" and "owner" columns, it can be seen that there is a predominance of car sales for diesel and petrol. As well as, individual seller type and cars with manual transmission. And almost triple sales for cars with the first owner.
 
 | ![](/Graphics/Fuel.png) | ![](./Graphics/Seller_type.png) |
@@ -85,6 +85,6 @@ Since we are dealing with a regression problem, the model's performance metrics 
 
 The MAE (Mean Absolute Error) and MAPE (Mean Absolute Percentage Error) of the training and test data were high. We applied the Cross-Validation that showed what was foreseen by MAE and MAPE. In other words, our model was unable to return a satisfactory result. 
 
-As a solution proposal we can, in the next step, analyze the outliers. For Linear Regression is an algorithm very sensitive to outliers. And if the data set has too many anomalous values, tools like the mean and the variance may not work well.
+As a solution proposal we can, in the next step, analyze the outliers. Linear Regression is an algorithm very sensitive to outliers. And if the data set has too many anomalous values, tools like the mean and the variance may not work well.
 
 
