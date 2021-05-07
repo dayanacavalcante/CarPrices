@@ -1,8 +1,8 @@
 # Car Prices
 
-**_The Problem_**
+**_Case Study_**
 
-Analyze trends in car attributes that contribute most to their sale and build a linear regression model to predict prices.
+Analysis of the most wanted attributes in the purchase of cars and construction of a Linear Regression Model to predict prices.
 
 **_Data extraction_**
 
@@ -10,18 +10,20 @@ The data was extracted from the following link: https://www.kaggle.com/nehalbirl
 
 **_EDA_**
 
-Analyze the data using descriptive statistics.
+Data analysis using descriptive statistics.
 
-First, let's check the existing data types, using the _.dtypes_ function. We can see that there are three columns of the integer type and four columns of the object type.
+First, let's check the data types using the _.dtypes_ function. There are three columns of the integer type and four columns of the object type.
 Analyzing the "fuel", "seller_type", "transmission" and "owner" columns, it can be seen that there is a predominance of car sales for diesel and petrol. As well as, individual seller type and cars with manual transmission. And almost triple sales for cars with the first owner.
 
 | ![](/Graphics/Fuel.png) | ![](./Graphics/Seller_type.png) |
 |:-:|:-:|
 | ![](/Graphics/Transmission.png) | ![](./Graphics/Owner.png) |
 
-We separate the column "name" as it does not matter for our analysis.
+I separated the "name" column as it does not matter for my analysis.
 
-Now we are going to use the _.describe()_ function to return the descriptive statistics values for the columns of the integer type. We can start with measures of central tendency:
+I used the _.describe()_ function to return the descriptive statistics values for the columns of the integer type. 
+
+_Measures of central tendency:_
 
 - **_Mean_**: indicates where the values are concentrated. 
 
@@ -29,7 +31,7 @@ Now we are going to use the _.describe()_ function to return the descriptive sta
 2. Selling_price: 5.041273e+05;
 3. Km_driven: 66215.777419;
 
-- **_Median_**: is the value that separates the upper half from the lower half of a data distribution. By default, we can adopt the percentage of 50%.
+- **_Median_**: is the value that separates the upper half from the lower half of a data distribution. By default, 50% can be adopted.
 
 1. Year: 2014;
 2. Selling_price: 3.500000e+0;
@@ -63,28 +65,27 @@ _Dispersion Measures:_
 
  _Correlation:_
 
-We want to know if two variables have any relationship with each other within this data set. For these cases, we can calculate the correlation. It can be seen that there is not a strong dependence on the variables.
+It is good to know if the variables are related to each other. For these cases, the correlation can be calculated. There is a considerable correlation between the variables:
+- Selling Price x Year;
+- Selling Price x Transmission Automatic;
+- Owner first x Year;
 
 **_Data Preparation_**
 
-Now we transform the object type variables into numeric ones with the Pandas get_dummies function.
-
+The object type variables were transformed into numerical ones with the function _get_dummies_ from the Pandas library.
 
 **_Model creation_**
 
-Create predictive models and predict future values and standards, in order to generalize occurrences and make decisions more efficient.
+The predictive model was created to predict future values and standards, in order to generalize the occurrences and make more efficient decisions.
 
-For this case study, the Linear Regression model was used.
+For this case study, the Linear Regression Model was used.
 
+**_Results_**
 
-**_Interpretation the results_**
+For regression problems, the model's performance metrics are calculated using errors.
 
-Interpret the defined models and collect important business insights.
+The MAE (Mean Absolute Error) and MAPE (Mean Absolute Percentage Error) of the training and test data were quite high. We applied the _Cross-Validation_ that showed what was foreseen by MAE and MAPE. In other words, this model was unable to return a satisfactory result. 
 
-Since we are dealing with a regression problem, the model's performance metrics are calculated through errors. The smaller the error, the better.
-
-The MAE (Mean Absolute Error) and MAPE (Mean Absolute Percentage Error) of the training and test data were quite high. We applied the Cross-Validation that showed what was foreseen by MAE and MAPE. In other words, our model was unable to return a satisfactory result. 
-
-As a solution proposal we can, in the next step, analyze the outliers. Linear Regression is an algorithm very sensitive to outliers. And if the data set has too many anomalous values, tools like the mean and the variance may not work well.
+In order to improve the model, it is proposed, in the next step, to perform _outliers_ analysis. Linear Regression is a very sensitive algorithm to _outliers_. And if the data set has too many anomalous values, tools like the _mean_ and the _variance_ may not work well.
 
 
