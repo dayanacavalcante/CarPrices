@@ -4,22 +4,20 @@
 
 Analysis of the most wanted attributes in the purchase of cars and construction of a Linear Regression Model to predict prices.
 
-**_Data extraction_**
+**_Data_**
 
-The data was extracted from the following link: https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho
+The data were extracted from the following link: https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho
 
-**_EDA_**
+**EDA**
 
 Data analysis using descriptive statistics.
 
-First, let's check the data types using the _.dtypes_ function. There are three columns of the integer type and four columns of the object type.
-Analyzing the "fuel", "seller_type", "transmission" and "owner" columns, it can be seen that there is a predominance of car sales for diesel and petrol. As well as, individual seller type and cars with manual transmission. And almost triple sales for cars with the first owner.
+First, let's check the data types using the _.dtypes_ function. There are three integer type columns and four object type columns. 
+Analyzing the "fuel", "seller_type", "transmission" and "owner" columns, it can be seen that there is a predominance of car sales for diesel and petrol. As well as, individual seller type and cars with manual transmission and almost triple sales for cars with the first owner.
 
 | ![](/Graphics/Fuel.png) | ![](./Graphics/Seller_type.png) |
 |:-:|:-:|
 | ![](/Graphics/Transmission.png) | ![](./Graphics/Owner.png) |
-
-I separated the "name" column as it does not matter for my analysis.
 
 I used the _.describe()_ function to return the descriptive statistics values for the columns of the integer type. 
 
@@ -57,13 +55,13 @@ _Dispersion Measures:_
 2. Selling_price: 334718640087.90295;
 3. Km_driven: 2175672269.448949;
 
-- **_Standard deviation_**: expresses how far the data are away from the mean.
+- **_Standard Deviation_**: expresses how far the data are away from the mean.
 
 1. Year: 4.215344;
 2. Selling_price: 5.785487e+0;
 3. Km_driven: 46644.102194;
 
- _Correlation:_
+**_Correlation:_**
 
 It is good to know if the variables are related to each other. For these cases, the correlation can be calculated. There is a considerable correlation between the variables:
 - Selling Price x Year;
@@ -74,17 +72,15 @@ It is good to know if the variables are related to each other. For these cases, 
 
 The object type variables were transformed into numerical ones with the function _get_dummies_ from the Pandas library.
 
-**_Model creation_**
+**_Linear Regression Model_**
 
-The predictive model was created to predict future values and standards, in order to generalize the occurrences and make more efficient decisions.
-
-For this case study, the Linear Regression Model was used.
+The predictive model was created to predict future values and standards, in order to generalize occurrences and make more efficient decisions.
 
 **_Results_**
 
 For regression problems, the model's performance metrics are calculated using errors.
 
-The MAE (Mean Absolute Error) and MAPE (Mean Absolute Percentage Error) of the training and test data were quite high. We applied the _Cross-Validation_ that showed what was foreseen by MAE and MAPE. In other words, this model was unable to return a satisfactory result. 
+The MAE (Mean Absolute Error) and MAPE (Mean Absolute Percentage Error) of the training and test data were quite high. I applied the _Cross-Validation_ that showed what was foreseen by MAE and MAPE. In other words, this model was unable to return a satisfactory result. 
 
 In order to improve the model, it is proposed, in the next step, to perform _outliers_ analysis. Linear Regression is a very sensitive algorithm to _outliers_. And if the data set has too many anomalous values, tools like the _mean_ and the _variance_ may not work well.
 
